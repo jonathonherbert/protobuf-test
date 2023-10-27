@@ -1,0 +1,7 @@
+version: v1
+types:
+  include:
+plugins:
+  - plugin: go
+    out: gen/go
+    opt: paths=source_relative

@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/guardian/protobuf-example";
+
+message RecipeHashes {
+
+    message Blobs {
+        string sha = 1;
+        string uid = 2;
+    }
+
+    uint32 schemaVersion = 1;
+    google.protobuf.Timestamp lastUpdated = 2;
+    repeated Blobs blobs = 3;
+}
